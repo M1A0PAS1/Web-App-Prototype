@@ -51,10 +51,26 @@ function saveData(){
             repetition,
             feeling,})});
     //Save to local storage
-    localStorage.setItem('exerciseData', JSON.stringify(data));
+    localStorage.setItem('exerciseData', JSON.stringify(dataSet));
 }
 
 function showSummary(){
-    const summary-container = document.getElementById('summary');
+    const summarycontainer = document.getElementById('summary');
+    //get exerciseData from localStorage
+    const data = JSON.parse(localStorage.getItem('exerciseData'));
+    if (data){
+        let summary = ' ';
+        //add every exerciseName,bodyPart ect. to the summary variable
+        data.forEach(function(recoard){
+            summary += '<div>';
+            summary += '<h1>' + recoard.exerciseName + '</h1>';
+            summary += '<p>' + recoard.bodyPart + '</p>';
+            summary += '<p>' + recoard.weight + '</p>';
+            summary += '<p>' + recoard.repetition + '</p>';
+            summary += '<p>' + recoard.feeling + '</p>';
+            summary += '</div>';
+        })
+        summarycontainer.innerHTML = summary;
+    }
 
 }
