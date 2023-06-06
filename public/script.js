@@ -13,6 +13,7 @@ function addRecoard(){
     card.classList.add('card');
     //Define what will be in the card
     card.innerHTML = `
+      <button onclick="showCardData(this)">Detail</button>
       <h1>${exerciseName}</h1>
       <p>Weight: ${weight}kg</p>
       <p>Repetition:${repetition}</p>
@@ -82,3 +83,20 @@ function deleteCard(button){
     card.parentNode.removeChild(card);
 }
 
+function showCardData(button) {
+    //Get the parent element(which is the corresponding card recoard)
+    const card = button.parentNode;
+    const exerciseName = card.getAttribute('data-exercise-name');
+    const bodyPart = card.getAttribute('data-body-part');
+    const weight = card.getAttribute('data-weight');
+    const repetition = card.getAttribute('data-repetition');
+    const feeling = card.getAttribute('data-feeling');
+    //alert a pop up window
+    alert(`
+      exerciseName: ${exerciseName}
+      bodyPart: ${bodyPart}
+      weight: ${weight}kg
+      repetition: ${repetition}
+      feeling: ${feeling}
+    `);
+}
