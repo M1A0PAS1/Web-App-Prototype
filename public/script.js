@@ -14,9 +14,10 @@ function addRecoard(){
     //Define what will be in the card
     card.innerHTML = `
       <h1>${exerciseName}</h1>
-      <p>:${weight}kg</p>
-      <p>:${repetition}</p>
-      <p>:${feeling}</p>
+      <p>weight:${weight}kg</p>
+      <p>repetition:${repetition}</p>
+      <p>feeling:${feeling}</p>
     `; 
+    
     cardContainer.appendChild(card);
 }
