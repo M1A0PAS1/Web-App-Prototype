@@ -11,9 +11,46 @@
     <main>
         <!-- Demo version of add info -->
         <div id="new-recoard-group">
-        </div>
+
+        <div>
         <label for="exercise-name">Exercise Name:</label>
-        <input type="string" id="exercise-name" />
+        <input type="string" id="exercise-name">
+        </div>
+
+        <div>
+            <label for="body-part">Body Part:</label>
+            <section id="body-part">
+                <option value="chest">Chest</option>
+                <option value="shoulders">Shoulders</option>
+            </section>
+        </div>
+
+        <div>
+            <label for="weight">Weight:</label>
+            <section id="weight">
+                <option value="chest">10KG</option>
+                <option value="shoulders">20KG</option>
+            </section>
+        </div>
+
+        <div>
+            <label for="repetition">Repetition:</label>
+            <section id="repetition">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </section>
+        </div>
+
+        <div>
+            <label for="feeling">Feeling:</label>
+            <section id="feeling">
+                <option value="1">Good</option>
+                <option value="2">Bad</option>
+            </section>
+        </div>
+
+        <button onclick="addRecoard()">Add Recoard</button>
+
         </div>
         <!-- Add a container -->
         <div id="card-container"></div>
