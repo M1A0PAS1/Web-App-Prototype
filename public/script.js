@@ -37,5 +37,24 @@ function saveData(){
     //Select all card
     const cards = document.querySelectorAll('.card');
     const dataSet = [];
+    cards.forEach((card) => {
+        const exerciseName = card.getAttribute('data-exercise-name');
+        const bodyPart = card.getAttribute('data-body-part');
+        const weight = card.getAttribute('data-weight');
+        const repetition = card.getAttribute('data-repetition');
+        const feeling = card.getAttribute('data-feeling');
+         //add data to the list
+        dataSet.push({
+            exerciseName,
+            bodyPart,
+            weight,
+            repetition,
+            feeling,})});
+    //Save to local storage
+    localStorage.setItem('exerciseData', JSON.stringify(data));
+}
+
+function showSummary(){
+    const summary-container = document.getElementById('summary');
 
 }
