@@ -17,7 +17,7 @@
         <input type="string" id="exercise-name">
         </div>
 
-        <div>
+        <!-- --><div>
             <label for="body-part">Body Part: </label>
             <select id="body-part">
                 <option value="chest">Chest</option>
@@ -29,8 +29,8 @@
         <div>
             <label for="weight">Weight:</label>
             <select id="weight">
-                <option value="chest">10KG</option>
-                <option value="shoulders">20KG</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
             </select>
         </div>
 
@@ -45,16 +45,20 @@
         <div>
             <label for="feeling">Feeling:</label>
             <select id="feeling">
-                <option value="1">Good</option>
-                <option value="2">Bad</option>
+                <option value="Good">Good</option>
+                <option value="Bad">Bad</option>
             </select>
         </div>
 
         <button onclick="addRecoard()">Add Recoard</button>
 
+        <button onclick="showSummary()">Summary</button>
+        <div id="summary"></div>
+
         </div>
         <!-- Add a container -->
         <div id="card-container"></div>
+        
     </main>
     <script src="script.js"></script>
 </body>

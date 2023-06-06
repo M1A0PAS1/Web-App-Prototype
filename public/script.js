@@ -14,10 +14,28 @@ function addRecoard(){
     //Define what will be in the card
     card.innerHTML = `
       <h1>${exerciseName}</h1>
-      <p>weight:${weight}kg</p>
-      <p>repetition:${repetition}</p>
-      <p>feeling:${feeling}</p>
+      <p>Weight: ${weight}kg</p>
+      <p>Repetition:${repetition}</p>
+      <p>Feeling:${feeling}</p>
     `; 
     
+   
     cardContainer.appendChild(card);
+
+    //For the print card detail & summary
+    card.setAttribute('data-exercise-name', exerciseName);
+    card.setAttribute('data-body-part', bodyPart);
+    card.setAttribute('data-weight', weight);
+    card.setAttribute('data-repetition', repetition);
+    card.setAttribute('data-feeling', feeling);
+
+    //Call the save data to local function
+    saveData();
+}
+
+function saveData(){
+    //Select all card
+    const cards = document.querySelectorAll('.card');
+    const dataSet = [];
+
 }
