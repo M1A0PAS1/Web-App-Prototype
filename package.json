@@ -2,10 +2,11 @@
   "name": "deco2017-webappprototype",
   "version": "1.0.0",
   "description": "Web application",
-  "prestart": "parcel build ./public/index.html",
-  "dev": "parcel serve ./public/index.html",
+
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
   "author": "Xinnnan Wang",
   "dependencies": {
