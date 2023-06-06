@@ -15,12 +15,18 @@
     flex-wrap: wrap;
 }
  .card{
+    margin: 2vh;
+    padding: 2vh;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 20vh;
+    height: 40vh;
 }
 
 .card img{
+    width: 10vh;
+    height: 10vh;
     object-fit: contain;
 }
