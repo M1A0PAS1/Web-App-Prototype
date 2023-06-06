@@ -17,7 +17,7 @@ function addRecoard(){
       <p>Weight: ${weight}kg</p>
       <p>Repetition:${repetition}</p>
       <p>Feeling:${feeling}</p>
-      <button onclick="deleteCard()">Delete</button>
+      <button onclick="deleteCard(this)">Delete</button>
     `; 
     
    
@@ -76,7 +76,7 @@ function showSummary(){
     }
 }
 
-function deleteCard(){
+function deleteCard(button){
     //Get the parent element(which is the corresponding card recoard)
     const card = button.parentNode;
     card.parentNode.removeChild(card);
