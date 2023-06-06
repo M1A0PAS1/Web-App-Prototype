@@ -96,6 +96,8 @@ function deleteCard(button){
     //Get the parent element(which is the corresponding card recoard)
     const card = button.parentNode;
     card.parentNode.removeChild(card);
+    //Update summary list
+    saveData();
 }
 
 function showCardData(button) {
